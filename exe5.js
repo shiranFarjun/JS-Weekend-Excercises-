@@ -43,7 +43,7 @@ function toCamelCase(str) {
         // Removes spaces 
         .replace(/ /g, '');
 }
-console.log(toCamelCase("The_Stealth_Warrior"));
+// console.log(toCamelCase("The_Stealth_Warrior"));
 
 
 
@@ -64,20 +64,24 @@ String.prototype.weird = function () {   //Add method to string class
     }
     return newString;
 }
-console.log(toWeirdCase("String"));//=> returns "StRiNg"
-console.log(toWeirdCase("Weird string case"));//=> returns "WeIrD StRiNg CaSe"
+// console.log(toWeirdCase("String"));//=> returns "StRiNg"
+// console.log(toWeirdCase("Weird string case"));//=> returns "WeIrD StRiNg CaSe"
 
 
 //Ex5.5 - Abbreviate two words
 function AbbreviateTwoWords(string) {
-    string.replace(/./g,' ')
-    let newString = string.split(' ');
-    console.log(newString);
-    for (let i = 0; i < newString.length; i++) {
-        if(newString[i] === " "){
-            
+    let last = 0;
+    for (let i in string) {
+        if (string[i] === ' ') {
+            last = i;
         }
     }
-    return newString.join(' ');
+    return console.log(string.charAt(0).toUpperCase() + '.' + string.charAt(parseInt(last) + 1).toUpperCase());
 }
-AbbreviateTwoWords('shiran hazan');
+
+// AbbreviateTwoWords('shiran Hazan');
+// AbbreviateTwoWords('avior farjun');
+// AbbreviateTwoWords('ofir farjun');
+
+
+
